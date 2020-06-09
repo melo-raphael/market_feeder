@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projeto.tcc.market.feeder.api.v1", "projeto.tcc.market.feeder.api.v1\projeto.tcc.market.feeder.api.v1.csproj", "{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{2EB2D8DF-E88E-4B60-8403-1099B41B2EBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{49F57E32-B093-4833-B3BE-690A54DAE6EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projeto.tcc.market.feeder.hub.v1", "projeto.tcc.market.feeder.hub.v1\projeto.tcc.market.feeder.hub.v1.csproj", "{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projeto.tcc.market.feeder.application", "projeto.tcc.market.feeder.application\projeto.tcc.market.feeder.application.csproj", "{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB} = {2EB2D8DF-E88E-4B60-8403-1099B41B2EBC}
+		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB} = {2EB2D8DF-E88E-4B60-8403-1099B41B2EBC}
+		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86} = {49F57E32-B093-4833-B3BE-690A54DAE6EF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60D96F82-592D-45E8-BA33-EE75648599DD}
+	EndGlobalSection
+EndGlobal
