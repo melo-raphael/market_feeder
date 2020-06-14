@@ -36,6 +36,8 @@ namespace projeto.tcc.market.feeder.api.v1
                 //options.InstanceName = "Quotes:";
             });
 
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +47,8 @@ namespace projeto.tcc.market.feeder.api.v1
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(option => option.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             //app.UseHttpsRedirection();
 
