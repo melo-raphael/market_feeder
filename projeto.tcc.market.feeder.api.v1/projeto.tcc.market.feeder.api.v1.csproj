@@ -16,5 +16,9 @@
     <PackageReference Include="RabbitMQ.Client" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\projeto.tcc.market.feeder.hub.v1\projeto.tcc.market.feeder.hub.v1.csproj" />
+  </ItemGroup>
+
 
 </Project>

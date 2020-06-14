@@ -55,7 +55,7 @@ namespace projeto.tcc.market.feeder.api.v1
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                //endpoints.MapHub<NotificationsHub>("/hub/notificationhub");
+                endpoints.MapHub<NotificationQuoteHub>("/hub/notification");
 
             });
         }
