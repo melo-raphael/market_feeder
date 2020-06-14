@@ -1,27 +1,27 @@
-﻿//using Microsoft.AspNetCore.SignalR;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Threading.Tasks;
+﻿//using microsoft.aspnetcore.signalr;
+//using system;
+//using system.collections.generic;
+//using system.linq;
+//using system.threading.tasks;
 
 //namespace projeto.tcc.market.feeder.api.v1
 //{
-//    public class NotificationsHub : Hub
+//    public class notificationshub : hub
 //    {
 
-//        public static List<string> users = new List<string>();
+//        public static list<string> users = new list<string>();
 
-//        public override async Task OnConnectedAsync()
+//        public override async task onconnectedasync()
 //        {
-//            await Groups.AddToGroupAsync(Context.ConnectionId, Context.User.Identity.Name);
-//            await base.OnConnectedAsync();
-//            users.Add(Context.ConnectionId);
+//            await groups.addtogroupasync(context.connectionid, context.user.identity.name);
+//            await base.onconnectedasync();
+//            users.add(context.connectionid);
 //        }
 
-//        public override async Task OnDisconnectedAsync(Exception ex)
+//        public override async task ondisconnectedasync(exception ex)
 //        {
-//            await Groups.RemoveFromGroupAsync(Context.ConnectionId, Context.User.Identity.Name);
-//            await base.OnDisconnectedAsync(ex);
+//            await groups.removefromgroupasync(context.connectionid, context.user.identity.name);
+//            await base.ondisconnectedasync(ex);
 //        }
 //    }
 //}
