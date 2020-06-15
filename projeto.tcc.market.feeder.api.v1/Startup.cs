@@ -36,7 +36,9 @@ namespace projeto.tcc.market.feeder.api.v1
                 //options.InstanceName = "Quotes:";
             });
 
+
             services.AddCors();
+            services.AddSignalR();
 
         }
 
@@ -48,7 +50,11 @@ namespace projeto.tcc.market.feeder.api.v1
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(option => option.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials());
 
             //app.UseHttpsRedirection();
 

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using projeto.tcc.market.feeder.api.v1.RabbitMQ;
 using System;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,13 +26,14 @@ namespace projeto.tcc.market.feeder.api.v1.BackgroundTasks
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+
             variation += 0.1M;
             variation2 += 0.2M;
 
 
             stoppingToken.Register(() => _logger.LogDebug("#1 AlphavantageTask background task is stopping."));
 
-            while (!stoppingToken.IsCancellationRequested)
+            while (true)
             {
                 _logger.LogDebug("GracePeriodManagerService background task is doing background work.");
 
@@ -40,14 +42,29 @@ namespace projeto.tcc.market.feeder.api.v1.BackgroundTasks
                 RabbitMQMessengeQueuer rb = new RabbitMQMessengeQueuer(_cache);
 
                 Console.WriteLine("BACKGROUND");
+                Console.WriteLine(NotificationQuoteHub.users.First());
 
-                await rb.GetEmployees(variation.ToString(), "PETR4");
-
-                await rb.GetEmployees(variation2.ToString(), "AMBEV");
+                NotificationQuoteHub nf = new NotificationQuoteHub();
 
 
-                await Task.CompletedTask;
+
+                await nf.GetQuote();
+
+
+                //try
+                //{
+                //    await rb.GetEmployees(variation.ToString(), "PETR4");
+
+                //    await rb.GetEmployees(variation2.ToString(), "AMBEV");
+                //    await Task.CompletedTask;
+
+                //}
+                //catch (Exception e)
+                //{
+                //    Console.WriteLine(e);
+                //}
             }
+
         }
 
         public async Task<dynamic> GetAssetQuotationFromAlphavantage()
@@ -64,6 +81,6 @@ namespace projeto.tcc.market.feeder.api.v1.BackgroundTasks
             return resutlt;
         }
 
-  
+
     }
 }
