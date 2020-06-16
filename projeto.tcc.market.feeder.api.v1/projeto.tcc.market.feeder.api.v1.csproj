@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AlphaVantage.Net.Core" Version="1.0.2" />
     <PackageReference Include="MediatR" Version="8.0.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Redis" Version="1.1.5" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.6.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.4" />
     <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
@@ -17,7 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\projeto.tcc.market.feeder.application\projeto.tcc.market.feeder.application.csproj" />
     <ProjectReference Include="..\projeto.tcc.market.feeder.hub.v1\projeto.tcc.market.feeder.hub.v1.csproj" />
+    <ProjectReference Include="..\projeto.tcc.market.feeder.infra.data\projeto.tcc.market.feeder.infra.data.csproj" />
   </ItemGroup>
 
 

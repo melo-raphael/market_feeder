@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using projeto.tcc.market.feeder.api.v1.BackgroundTasks;
+using projeto.tcc.market.feeder.application.Interface;
+using projeto.tcc.market.feeder.infra.data.Proxies;
+using projeto.tcc.market.feeder.infra.data.RedisCache;
 
 namespace projeto.tcc.market.feeder.api.v1
 {
@@ -28,13 +23,15 @@ namespace projeto.tcc.market.feeder.api.v1
         {
             var redis = Configuration.GetConnectionString("RedisConnection");
             services.AddControllers();
-            //services.AddSignalR().AddRedis("http://localhost:6379");
-            //services.AddHostedService<AlphavantageTask>();
+
             services.AddDistributedRedisCache(options =>
             {
                 options.Configuration = Configuration.GetConnectionString("RedisConnection");
-                //options.InstanceName = "Quotes:";
+                options.InstanceName = "Quotes:";
             });
+
+            services.AddSingleton<IAlphavantageClient, AlphavantageClient>();
+            services.AddSingleton<ICache, RedisCache>();
 
 
             services.AddCors();
@@ -56,11 +53,9 @@ namespace projeto.tcc.market.feeder.api.v1
                 .SetIsOriginAllowed(origin => true) // allow any origin
                 .AllowCredentials());
 
-            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - P
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{49F57E32-B093-4833-B3BE-690A54DAE6EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projeto.tcc.market.feeder.hub.v1", "projeto.tcc.market.feeder.hub.v1\projeto.tcc.market.feeder.hub.v1.csproj", "{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projeto.tcc.market.feeder.hub.v1", "projeto.tcc.market.feeder.hub.v1\projeto.tcc.market.feeder.hub.v1.csproj", "{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projeto.tcc.market.feeder.application", "projeto.tcc.market.feeder.application\projeto.tcc.market.feeder.application.csproj", "{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projeto.tcc.market.feeder.application", "projeto.tcc.market.feeder.application\projeto.tcc.market.feeder.application.csproj", "{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infrastructure", "03 - Infrastructure", "{B55CCEDE-96B4-48FB-A2E2-456733A486B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projeto.tcc.market.feeder.infra.data", "projeto.tcc.market.feeder.infra.data\projeto.tcc.market.feeder.infra.data.csproj", "{D80C3052-D704-4EC7-9147-78E9C7E5B851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D80C3052-D704-4EC7-9147-78E9C7E5B851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80C3052-D704-4EC7-9147-78E9C7E5B851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80C3052-D704-4EC7-9147-78E9C7E5B851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80C3052-D704-4EC7-9147-78E9C7E5B851}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 		{90DC4FFB-9297-4F2C-97AF-89DB405FB0BB} = {2EB2D8DF-E88E-4B60-8403-1099B41B2EBC}
 		{A8AFB33B-98F0-45B1-97A3-D7A53BA118CB} = {2EB2D8DF-E88E-4B60-8403-1099B41B2EBC}
 		{F1E25EA1-20AF-4911-A724-0CCF20BD9B86} = {49F57E32-B093-4833-B3BE-690A54DAE6EF}
+		{D80C3052-D704-4EC7-9147-78E9C7E5B851} = {B55CCEDE-96B4-48FB-A2E2-456733A486B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60D96F82-592D-45E8-BA33-EE75648599DD}
